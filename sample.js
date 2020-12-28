@@ -15,7 +15,7 @@ var random_y;
 var gmRect;
 
 var count_num; //ゴミ箱に捨てた数(カウント)の情報
-var count = 0; //ゴミ箱に捨てた数(カウント)
+var count = 1000; //ゴミ箱に捨てた数(カウント)
 
 var supportTouch = 'ontouchend' in document; // タッチイベントが利用可能かの判別
 
@@ -203,7 +203,7 @@ function kusudama() {
   newDiv.setAttribute("id", "flag")
   newDiv.setAttribute("class", "flag")
   newDiv.setAttribute("width","100px"); // img要素にwidthを設定
-  newDiv.setAttribute("style", "font-size: 500%; position: absolute; left: "+(win_width/2-60)+"px; z-index: 400")
+  newDiv.setAttribute("style", "transform-style: preserve-3d; font-size: 500%; position: absolute; left: "+(win_width/2-60)+"px; z-index: 400")
   document.body.appendChild(newDiv)
 
   parentDiv = document.getElementById("flag"); // 親要素（div）への参照を取得
