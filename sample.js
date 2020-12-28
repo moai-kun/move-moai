@@ -78,6 +78,7 @@ window.onload = function(){
 function touchStatEvent(e) {
     //スクロール無効化
     e.preventDefault();
+    moai.removeEventListener(EVENTNAME_TOUCHSTART, removeKusudama); // くす玉の要素を削除する処理を削除
     moai.style.position = "absolute";
     document.getElementById("text").innerHTML = "え、";
     moai.addEventListener(EVENTNAME_TOUCHMOVE, touchMoveEvent); // 画面上で指を移動させているきの処理を追加
@@ -85,7 +86,6 @@ function touchStatEvent(e) {
 
 // 画面上で指を移動させているきの処理を定義
 function touchMoveEvent(e) {
-    moai.removeEventListener(EVENTNAME_TOUCHSTART, removeKusudama); // くす玉の要素を削除する処理を削除
     // スクロール無効化
     e.preventDefault();
     // 指が触れた位置のx,y座標を記録
@@ -293,7 +293,7 @@ function movepaper(papers, length){
           'left': (X+'px'),
           'top': (Y+'px')
         }, paper.D, 'linear');
-        if (Y > win_height){ // 画面外(横)に出たら
+        if (Y > win_height+50){ // 画面外(横)に出たら
           tmp = papers.splice(icount, 1);
           papers.unshift(tmp[0]);
           rmCount++;
