@@ -184,7 +184,7 @@ function kusudama() {
   newElementL.setAttribute("class","rotLeft"); // img要素にclassを設定
   newElementL.setAttribute("src","./pictures/kusudama_left.png"); // img要素にsrcを設定
   newElementL.setAttribute("width","100px"); // img要素にwidthを設定
-  newElementL.setAttribute("style","z-index:1000; position: absolute; left: "+(win_width/2-100)+"px; top: 0px"); // img要素にstyleを設定
+  newElementL.setAttribute("style","position: absolute; left: "+(win_width/2-100)+"px; z-index: 1000;"); // img要素にstyleを設定
 
   // 右くす玉作成
   let newElementR = document.createElement("img"); // p要素作成
@@ -192,7 +192,7 @@ function kusudama() {
   newElementR.setAttribute("class","rotRight"); // img要素にclassを設定
   newElementR.setAttribute("src","./pictures/kusudama_right.png"); // img要素にsrcを設定
   newElementR.setAttribute("width","100px"); // img要素にwidthを設定
-  newElementR.setAttribute("style","z-index:1000; position: absolute; left: "+(win_width/2)+"px; top: 0px"); // img要素にstyleを設定
+  newElementR.setAttribute("style","position: absolute; left: "+(win_width/2)+"px; z-index: 1000;"); // img要素にstyleを設定
 
   let parentDiv = document.getElementById("parent-pic"); // 親要素（div）への参照を取得
   parentDiv.appendChild(newElementL); // 左くす玉追加
@@ -237,7 +237,7 @@ function kusudama() {
       this.newElement.setAttribute("class",color); // img要素にclassを設定
       this.newElement.setAttribute("src","./pictures/moai.png"); // img要素にsrcを設定
       this.newElement.setAttribute("width",this.width+"px"); // img要素にwidthを設定
-      this.newElement.setAttribute("style","z-index:800; position: absolute; left: "+(this.startX)+"px; top: 30px"); // img要素にstyleを設定
+      this.newElement.setAttribute("style","position: absolute; left: "+(this.startX)+"px; top: 30px; z-index:800;"); // img要素にstyleを設定
       let parentDiv = document.getElementById("parent-pic"); // 親要素（div）への参照を取得
       parentDiv.appendChild(this.newElement); // 追加
     }
