@@ -203,14 +203,14 @@ function kusudama() {
   newDiv.setAttribute("id", "flag")
   newDiv.setAttribute("class", "flag")
   newDiv.setAttribute("width","100px"); // img要素にwidthを設定
-  newDiv.setAttribute("style", "font-size: 400%; position: absolute; left: "+(win_width/2-50)+"px; z-index: 400")
+  newDiv.setAttribute("style", "font-size: 400%; position: absolute; left: "+(win_width/2-56)+"px; z-index: 400")
   document.body.appendChild(newDiv)
 
   parentDiv = document.getElementById("flag"); // 親要素（div）への参照を取得
 
   let newSpan1 = document.createElement('span');
   newSpan1.setAttribute("class", "redfont");
-  let newContent1 = document.createTextNode("祝 ")
+  let newContent1 = document.createTextNode("祝")
   newSpan1.appendChild(newContent1)
   parentDiv.appendChild(newSpan1);
 
