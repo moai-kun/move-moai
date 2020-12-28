@@ -85,7 +85,7 @@ function touchStatEvent(e) {
 
 // 画面上で指を移動させているきの処理を定義
 function touchMoveEvent(e) {
-    moai.removeEventListener(EVENTNAME_TOUCHSTART, removeKusudama); // くす玉の要素を削除
+    moai.removeEventListener(EVENTNAME_TOUCHSTART, removeKusudama); // くす玉の要素を削除する処理を削除
     // スクロール無効化
     e.preventDefault();
     // 指が触れた位置のx,y座標を記録
@@ -310,17 +310,16 @@ function movepaper(papers, length){
 
     draw_pa(); // 描画
   }).then(() => { //上記処理後1000秒後，以下の関数を実行
+    function removeKusudama(){ // くす玉の要素を消す処理
+      $('#kusudamaLeft').remove(); //くす玉削除
+      $('#kusudamaRight').remove(); //くす玉削除
+      $('#flag').remove(); // 幕削除
+      for (let i = 0; i < length; i++) {
+        $('#paper'+i).remove(); //紙吹雪削除
+      }
+    }
     moai.addEventListener(EVENTNAME_TOUCHSTART, removeKusudama);
   }).catch(() => { // エラーハンドリング
     console.error('Something wrong!')
   })
-}
-
-function removeKusudama(){ // 画面に触れた時の処理を追加
-  $('#kusudamaLeft').remove(); //くす玉削除
-  $('#kusudamaRight').remove(); //くす玉削除
-  $('#flag').remove(); // 幕削除
-  for (let i = 0; i < length; i++) {
-    $('#paper'+i).remove(); //紙吹雪削除
-  }
 }
