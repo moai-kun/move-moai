@@ -1,3 +1,7 @@
+* {
+    transform-style: flat;
+}
+
 .active {
     transition: all 1200ms 0s ease;
     transform: rotate(2.0turn) scale(0.0);
@@ -36,20 +40,19 @@
 .flag {
     top: 20px;
     transform-origin: center top;
-    transform-style: flat;
     background-color: white;
+    padding: 30px 0px 30px 0px;
     border: solid 1px black;
-    padding: 10px 2px 10px 2px;
     writing-mode: vertical-rl;
     animation: testing 4s linear forwards;
 }
 @keyframes testing {
     0% {transform: scale(1.0, 0) }
     20% {transform: scale(1.0, 1.0) }
-    40% {transform: scale(1.0, 1.0) rotateY(15deg) }
-    60% {transform: scale(1.0, 1.0) rotateY(0deg) }
-    80% {transform: scale(1.0, 1.0) rotateY(-15deg) }
-    100% {transform: scale(1.0, 1.0) rotateY(0deg) }
+    40% {transform: rotateY(15deg) }
+    60% {transform: rotateY(0deg) }
+    80% {transform: rotateY(-15deg) }
+    100% {transform: rotateY(0deg) }
 }
 
 .rotLeft {
