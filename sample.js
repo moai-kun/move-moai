@@ -78,7 +78,6 @@ window.onload = function(){
 function touchStatEvent(e) {
     //スクロール無効化
     e.preventDefault();
-    moai.removeEventListener(EVENTNAME_TOUCHSTART, removeKusudama); // くす玉の要素を削除する処理を削除
     moai.style.position = "absolute";
     document.getElementById("text").innerHTML = "え、";
     moai.addEventListener(EVENTNAME_TOUCHMOVE, touchMoveEvent); // 画面上で指を移動させているきの処理を追加
@@ -317,6 +316,7 @@ function movepaper(papers, length){
       for (let i = 0; i < length; i++) {
         $('#paper'+i).remove(); //紙吹雪削除
       }
+      moai.removeEventListener(EVENTNAME_TOUCHSTART, removeKusudama); // くす玉の要素を削除する処理を削除
     }
     moai.addEventListener(EVENTNAME_TOUCHSTART, removeKusudama);
   }).catch(() => { // エラーハンドリング
