@@ -16,7 +16,7 @@
 
 
 .slowly {
-    transform: translateZ(800px);
+/*    transform: translateZ(800px); */
     animation: rot 0.5s linear infinite;
 }
 @keyframes rot {
@@ -35,7 +35,7 @@
     color: #ff0000;
 }
 .flag {
-    transform: translateZ(400px);
+/*    transform: translateZ(400px); */
     top: 20px;
     transform-origin: center top;
     background-color: white;
@@ -54,7 +54,7 @@
 }
 
 .rotLeft {
-    transform: translateZ(1000px);
+/*    transform: translateZ(1000px); */
     transform-origin: right top;
     animation: rotL 1s forwards;
 }
@@ -64,7 +64,7 @@
 }
 
 .rotRight {
-    transform: translateZ(1000px);
+/*    transform: translateZ(1000px); */
     transform-origin: left top;
     animation: rotR 1s forwards;
 }
