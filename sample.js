@@ -15,7 +15,7 @@ var random_y;
 var gmRect;
 
 var count_num; //ゴミ箱に捨てた数(カウント)の情報
-var count = 100; //ゴミ箱に捨てた数(カウント)
+var count = 500; //ゴミ箱に捨てた数(カウント)
 
 var supportTouch = 'ontouchend' in document; // タッチイベントが利用可能かの判別
 
@@ -184,7 +184,7 @@ function kusudama() {
   newElementL.setAttribute("class","rotLeft"); // img要素にclassを設定
   newElementL.setAttribute("src","./pictures/kusudama_left.png"); // img要素にsrcを設定
   newElementL.setAttribute("width","100px"); // img要素にwidthを設定
-  newElementL.setAttribute("style","position: absolute; left: "+(win_width/2-100)+"px; top: 0px;"); // img要素にstyleを設定
+  newElementL.setAttribute("style","position: absolute; left: "+(win_width/2-100)+"px; top: 0px; z-index: 1000;"); // img要素にstyleを設定
 
   // 右くす玉作成
   let newElementR = document.createElement("img"); // p要素作成
@@ -192,7 +192,7 @@ function kusudama() {
   newElementR.setAttribute("class","rotRight"); // img要素にclassを設定
   newElementR.setAttribute("src","./pictures/kusudama_right.png"); // img要素にsrcを設定
   newElementR.setAttribute("width","100px"); // img要素にwidthを設定
-  newElementR.setAttribute("style","position: absolute; left: "+(win_width/2)+"px; top: 0px;"); // img要素にstyleを設定
+  newElementR.setAttribute("style","position: absolute; left: "+(win_width/2)+"px; top: 0px; z-index: 1000;"); // img要素にstyleを設定
 
   let parentDiv = document.getElementById("parent-pic"); // 親要素（div）への参照を取得
   parentDiv.appendChild(newElementL); // 左くす玉追加
@@ -203,7 +203,7 @@ function kusudama() {
   newDiv.setAttribute("id", "flag")
   newDiv.setAttribute("class", "flag")
   newDiv.setAttribute("width","100px"); // img要素にwidthを設定
-  newDiv.setAttribute("style", "transform-style: preserve-3d; font-size: 500%; position: absolute; left: "+(win_width/2-60)+"px;")
+  newDiv.setAttribute("style", "transform-style: preserve-3d; font-size: 500%; position: absolute; left: "+(win_width/2-60)+"px; z-index: 400")
   document.body.appendChild(newDiv)
 
   parentDiv = document.getElementById("flag"); // 親要素（div）への参照を取得
