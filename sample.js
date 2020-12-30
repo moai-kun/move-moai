@@ -178,6 +178,7 @@ function addCharacter() {
 function kusudama() {
   win_width = window.innerWidth; //ウィンドウの横サイズ
   win_height = window.innerHeight; //ウィンドウの縦サイズ
+
   // 左くす玉作成
   let newElementL = document.createElement("img"); // p要素作成
   newElementL.setAttribute("id","kusudamaLeft"); // img要素にidを設定
@@ -238,7 +239,7 @@ function kusudama() {
       this.newElement.setAttribute("src","./pictures/moai.png"); // img要素にsrcを設定
       this.newElement.setAttribute("width",this.width+"px"); // img要素にwidthを設定
       this.newElement.setAttribute("style","position: absolute; left: "+(this.startX)+"px; top: 30px; z-index:800;"); // img要素にstyleを設定
-      let parentDiv = document.getElementById("parent-pic"); // 親要素（div）への参照を取得
+      let parentDiv = document.getElementById("parent-papers"); // 親要素（div）への参照を取得
       parentDiv.appendChild(this.newElement); // 追加
     }
   }
