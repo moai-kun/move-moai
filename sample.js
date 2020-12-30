@@ -15,7 +15,7 @@ var random_y;
 var gmRect;
 
 var count_num; //ゴミ箱に捨てた数(カウント)の情報
-var count = 500; //ゴミ箱に捨てた数(カウント)
+var count = 50; //ゴミ箱に捨てた数(カウント)
 
 var supportTouch = 'ontouchend' in document; // タッチイベントが利用可能かの判別
 
