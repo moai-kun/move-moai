@@ -47,9 +47,9 @@
 @keyframes testing {
     0% {transform: scale(1.0, 0) }
     20% {transform: scale(1.0, 1.0) }
-    40% {transform: rotateY(15deg) }
+    40% {transform: rotateY(1deg) }
     60% {transform: rotateY(0deg) }
-    80% {transform: rotateY(-15deg) }
+    80% {transform: rotateY(-1deg) }
     100% {transform: rotateY(0deg) }
 }
 
